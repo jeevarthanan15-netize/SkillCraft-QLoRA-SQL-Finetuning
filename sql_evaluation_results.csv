@@ -1,0 +1,6 @@
+Question,Expected_SQL,Base_Correct,Fine_Tuned_Correct
+Show all customers from Chennai.,SELECT * FROM customers WHERE city = 'Chennai';,True,True
+Find the cheapest product.,SELECT * FROM products ORDER BY price ASC LIMIT 1;,False,True
+Count the total number of customers.,SELECT COUNT(*) FROM customers;,False,True
+Find employees whose salary is above 50000.,SELECT * FROM employees WHERE salary > 50000;,True,True
+Show products belonging to the Electronics category.,SELECT * FROM products WHERE category = 'Electronics';,True,True

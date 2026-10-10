@@ -1,0 +1,27 @@
+Question,Base_Model_Output,Fine_Tuned_Model_Output
+Show all customers from Chennai.,"```sql
+SELECT * FROM Customers WHERE City = 'Chennai';
+```",SELECT * FROM customers WHERE city = 'Chennai';
+Find the cheapest product.,"To convert the natural language request ""Find the cheapest product"" into an SQL query, you would typically need to know the specific database schema and structure of your data. However, I can provide a general example based on common database structures:
+
+Assuming you have a table named `products` with columns like `product_id`, `price`, and possibly other relevant information, here is how you might write an SQL query to find the cheapest product:
+
+```sql
+SELECT MIN(price) AS lowest_price, product_id
+FROM products
+GROUP BY product_id;
+```
+
+This query calculates the minimum price for each unique product ID in the `products`",SELECT * FROM products ORDER BY price ASC LIMIT 1;
+Count the total number of customers.,"```sql
+SELECT COUNT(*) AS total_customers
+FROM customers;
+```",SELECT COUNT(*) FROM customers;
+Find employees whose salary is above 50000.,"```sql
+SELECT * FROM Employees
+WHERE Salary > 50000;
+```",SELECT * FROM Employees WHERE Salary > 50000;
+Show products belonging to the Electronics category.,"```sql
+SELECT * FROM Products
+WHERE Category = 'Electronics';
+```",SELECT * FROM Products WHERE Category = 'Electronics';
